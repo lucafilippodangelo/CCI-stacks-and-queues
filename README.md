@@ -9,3 +9,5 @@ SOLUTION:
 3) Pop from support stack when popping value from main stack equal current supportStack min
 
 - implemented in "//LD Q3_02_StackMin"
+
+## 3.3 Stack of Plates
