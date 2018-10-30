@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.2 Stack Min", "3.2 Stack Min\3.2 Stack Min.csproj", "{352FE9C2-BBD1-4EE5-A5A5-830E7C01BF7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.3 Stack of Plates", "3.3 Stack of Plates\3.3 Stack of Plates.csproj", "{7C0A19C5-989E-45A2-8B5B-8EB79938BFF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.4 Queue via Stacks", "3.3 Stack of Plates\3.4 Queue via Stacks.csproj", "{7C0A19C5-989E-45A2-8B5B-8EB79938BFF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

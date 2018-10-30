@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _3._3_Stack_of_Plates
+namespace _3._4_Queue_via_Stacks
 {
     class Program
     {
