@@ -24,9 +24,10 @@ SOLUTION:
 Implement a class which implements a queue using two stacks
 
 SOLUTION:
-- having original stack "A" with newest elements, we need of a support stack called "B" with oldest element.
-  A) perform swap at any peek, pop and then swap back
-     - at any peek, pop we pop everything from "A" to "B" perform the peek, pop operation in  "B" and then pop back to "A" 
-  B) Perform swap only when needed (better because we move elements only when "B" gets empty, it's a kind of lazy approach)
-     - at any push, pop, pick we try to reverse elements from "A" to "B" if "B" empty
-     - we perform push in "A" and pop in "B".
+
+Having original stack "A" with newest elements, we need of a support stack called "B" with oldest element.
+  - perform swap at any peek, pop and then swap back
+    - at any peek, pop we pop everything from "A" to "B" perform the peek, pop operation in  "B" and then pop back to "A" 
+  - Perform swap only when needed (better because we move elements only when "B" gets empty, it's a kind of lazy approach)
+    - at any push, pop, pick we try to reverse elements from "A" to "B" if "B" empty
+    - we perform push in "A" and pop in "B".
