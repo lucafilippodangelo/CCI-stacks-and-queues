@@ -18,7 +18,7 @@ SOLUTION:
 2) Push() will operate on the last stack adding to it, if full a new stack will be added to the arrayList, then the element will be added to the new stack.
 3) Pop() will operate as well on the last stack, if it will be empty after popping, taht stack will be removed from the list of stacks.
 
-- NOT implemented because trivial.
+- NOT implemented because trivial. Notes in the book.
 
 ## 3.4 Queue via Stacks
 Implement a class which implements a queue using two stacks
@@ -31,3 +31,21 @@ Having original stack "A" with newest elements, we need of a support stack calle
   - Perform swap only when needed (better because we move elements only when "B" gets empty, it's a kind of lazy approach)
     - at any push, pop, pick we try to reverse elements from "A" to "B" if "B" empty
     - we perform push in "A" and pop in "B".
+
+- NOT implemented because trivial. Notes in the book.
+
+## 3.5 Sort Stack
+Need to sort the input stack having the smallest items on the top. It is possible to use a support stack. Supported operations are the common push, pop, peek, isEmpty.
+
+SOLUTION:
+
+Having original stack "A" to order, we need of a support stack called "B" that at the end of the procedure will contain the biggest element on the top.
+  - while loop on "A" until thie stack is empty
+    - pop top element from "A" in a tempVar
+	- while loop in "B" until ("B"!=empty && topElementB > tempVar) 
+	  - if condition verified -> pop from "B" and push in "A"
+	- push tempVar in "B"
+  - while loop on "B" until empty
+    - pop all elements and push to "A"
+
+- NOT implemented because trivial. Notes in the book.
