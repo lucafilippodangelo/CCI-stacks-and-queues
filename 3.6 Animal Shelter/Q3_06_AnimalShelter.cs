@@ -33,12 +33,13 @@ namespace _3._6_Animal_Shelter
         #region region-> Manage Queues
 
         internal class ManageQueues
-            {
+        {
+            //LD has to have two LIFO structures
+            private LinkedList<AnimalCat> CatList = new LinkedList<AnimalCat>();
+            private LinkedList<AnimalDog> DogList = new LinkedList<AnimalDog>();
+
             internal ManageQueues()
-            {
-                //LD has to have two LIFO structures
-                private LinkedList<AnimalCat> CatList = new LinkedList<AnimalCat>();
-                private LinkedList<AnimalDog> DogList = new LinkedList<AnimalDog>();
+            {}
 
             //LD "Enqueue" method to insert the right animal in the propper queue
             internal void enqueueAnimal(Animal anAnimal)
@@ -46,18 +47,44 @@ namespace _3._6_Animal_Shelter
                 //LD depending on the type enqueue in the proper queue.
                 //LD there in an elegant approach using interfaces instead of IF, WILL IMPLEMENT IT
                 if (anAnimal is AnimalCat)
-                    { CatList.AddLast(anAnimal); }
-
+                { CatList.AddLast((AnimalCat)anAnimal); }
+                else
+                { DogList.AddLast((AnimalDog)anAnimal); }
             }
 
-            //LD "Dequeue" method that return the oldest between all animals in the shelter
-
             //LD "Dequeue Dog" method
+            internal AnimalDog dequeueDog()
+            {
+                AnimalDog lastDog = DogList.Last.Value;
+                DogList.RemoveLast();
+                return lastDog;
+            }
 
             //LD "Dequeue Cat" method
+            internal AnimalCat dequeueCat()
+            {
+                AnimalCat lastCat = CatList.Last.Value;
+                CatList.RemoveLast();
+                return lastCat;
+            }
+
+
+            //LD "Dequeue" method that return the oldest between all animals in the shelter
+            internal Animal dequeueOldest()
+            {
+                AnimalDog lastDog = DogList.Last.Value;
+                AnimalCat lastCat = CatList.Last.Value;
+
+                if (lastDog.arrivalTime > lastCat.arrivalTime)
+                {
+                    return lastDog;
+                }
+                return dequeueCat();
+            }
+
+
 
         }
-    }
 
         #endregion
 

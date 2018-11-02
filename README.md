@@ -8,7 +8,7 @@ SOLUTION:
 2) Push in supportStack new min when pushing value in main stack <= supportStack current min
 3) Pop from support stack when popping value from main stack equal current supportStack min
 
-- implemented in "//LD Q3_02_StackMin"
+**implemented in "//LD Q3_02_StackMin"**
 
 ## 3.3 Stack of Plates 
 Design a list of stacks and threat them as a single stack with "push" and "pop" functionalities. This structure should have a system to create a new stack when the previous one is full and viceversa. So we should have methods like "setOfStacks.Push" and "setOfStacks.Pop" behaving identically as a single stack.
