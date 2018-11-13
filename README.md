@@ -49,3 +49,16 @@ Having original stack "A" to order, we need of a support stack called "B" that a
     - pop all elements and push to "A"
 
 **NOT implemented** because trivial. Notes in the book.
+
+## 3.6 Animal Shetler 
+An animal Shetler holds only dogs and cats and operates on FIFO basis. People can chose to adopt the oldest between both or they can chose to get the oldest cat or dog. The oldest is considered by arrival time. Create a data struvture to maintain "enqueue", "dequeueAny", "dequeudDog", "dequeueCat". May use linked list data structure.
+
+SOLUTION:
+- implement support abstract class "Animal", with subtype "AnimalCat" and "AnimalDog".
+- implement support class for queues called "ManageQueues" having methods:
+  - "enqueueAnimal(Animal anAnimal)" to enqueue in separated linked lists dog and cat
+  - "dequeueDog()" from dog linked list
+  - "dequeueCat()" from cat linked list
+  - "dequeueOldest()" dequeue the oldest by arrival time between the last element in dog and cat linked lists 
+
+**implemented in "//LD Q3_06_AnimalShelter"**

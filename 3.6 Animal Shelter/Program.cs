@@ -6,7 +6,8 @@ namespace _3._6_Animal_Shelter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Q3_06_AnimalShelter.Run();
+            Console.WriteLine();
         }
     }
 }
